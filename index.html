@@ -31,9 +31,20 @@
     <style type="text/tailwindcss">
       @custom-variant dark (&:where(.dark, .dark *));
       @theme {
+        /* common and header */
         --font-sans: "Inter", sans-serif;
         --color-primary: #006bff;
         --color-waterloo: #757693;
+        --color-black: #181c31;
+        /* hero */
+        --color-manatee: #999aa1;
+        --color-titlebg: #adfff8;
+        --color-titlebgdark: #46495a;
+        --text-hero: 44px;
+        --text-hero--line-height: 58px;
+        --color-blackho: #2c3149;
+        --color-btndark: #292e45;
+        --shadow-solid-l: 0px 10px 120px 0px rgba(45, 74, 170, 0.1);
       }
     </style>
 
@@ -55,7 +66,7 @@
     <!-- Project CSS -->
     <link rel="stylesheet" href="./css/style.css" />
   </head>
-  <body class="bg-white dark:bg-[#181C31]">
+  <body class="bg-white dark:bg-black">
     <!-- Header -->
 
     <header
@@ -273,7 +284,75 @@
     <!-- Main -->
     <main>
       <!-- Hero -->
-      <section></section>
+      <section class="overflow-hidden pt-35 md:pt-40 xl:pt-46 pb-20 xl:pb-25">
+        <div class="max-w-[1390px] mx-auto px-4 md:px-8 2xl:px-0">
+          <div class="flex lg:items-center lg:gap-8 xl:gap-32.5">
+            <div class="md:w-1/2">
+              <p class="mb-4.5 text-lg font-medium text-black dark:text-white">
+                🔥 Solid - A Complete SaaS Starter Template for SaaS
+              </p>
+              <h1
+                class="mb-5 pr-16 text-3xl font-bold text-black xl:text-hero isolate dark:text-white"
+              >
+                Robust SaaS Boilerplate and Starter for<span
+                  class="relative ml-2.5 inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg dark:before:bg-titlebgdark"
+                  >Next.js</span
+                >
+              </h1>
+              <p
+                class="text-base leading-relaxed text-waterloo dark:text-manatee"
+              >
+                Packed with all the key integrations you need for swift SaaS
+                startup launch, including - Authentication, Database, Sanity
+                Blog, Essential UI Components, Business Pages and More.
+                Built-winth - Next.js, React 18 and TypeScript.
+              </p>
+              <div class="mt-10">
+                <a
+                  href="#"
+                  class="text-base text-white focus:ring-4 inline-block rounded-full bg-black px-7.5 py-2.5 leading-relaxed transition-colors duration-300 ease-in-out hover:bg-blackho dark:bg-btndark dark:hover:bg-blackho focus:outline-none focus:ring-gray-300 dark:focus:ring-gray-700"
+                >
+                  Get Started
+                </a>
+              </div>
+            </div>
+            <div class="hidden md:w-1/2 lg:block">
+              <div class="relative 2xl:-mr-7.5">
+                <img
+                  src="./img/shape-01.webp"
+                  alt=""
+                  class="absolute -left-11.5 top-0"
+                />
+                <img
+                  src="./img/shape-02.svg"
+                  alt=""
+                  class="absolute bottom-0 right-0 z-10"
+                />
+                <img
+                  src="./img/shape-03.svg"
+                  alt=""
+                  class="absolute -right-6.5 bottom-0 z-1"
+                />
+
+                <img
+                  src="./img/hero-light.svg"
+                  alt="Hero"
+                  width="700"
+                  height="444"
+                  class="w-full h-auto shadow-solid-l dark:hidden"
+                />
+                <img
+                  src="./img/hero-dark.svg"
+                  alt="Hero"
+                  width="700"
+                  height="444"
+                  class="hidden w-full h-auto shadow-solid-l dark:block"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <!-- Brands -->
       <section></section>
       <!-- Features -->

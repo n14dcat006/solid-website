@@ -6,13 +6,37 @@
     <title>
       Next.js Starter Template for SaaS Startups - Solid SaaS Boilerplate
     </title>
-    <!-- Tailwind  -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
     <!-- Flowbite -->
     <link
       href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css"
       rel="stylesheet"
     />
+    <!-- Dark mode switcher -->
+    <script>
+      // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+      if (
+        localStorage.getItem("color-theme") === "dark" ||
+        (!("color-theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
+
+    <!-- Tailwind  -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @custom-variant dark (&:where(.dark, .dark *));
+      @theme {
+        --font-sans: "Inter", sans-serif;
+        --color-primary: #006bff;
+        --color-waterloo: #757693;
+      }
+    </style>
+
     <!-- Awesome Font -->
     <link
       rel="stylesheet"
@@ -21,10 +45,231 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- Inter Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Project CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
-  <body>
+  <body class="bg-white dark:bg-[#181C31]">
     <!-- Header -->
-    <header></header>
+
+    <header
+      id="header"
+      class="fixed top-0 left-0 z-50 w-full py-7 transition-all duration-300"
+    >
+      <div
+        class="max-w-[1390px] px-4 md:px-8 2xl:px-0 flex flex-wrap items-center justify-between mx-auto"
+      >
+        <!-- Logo -->
+        <a href="#" class="flex items-center xl:w-1/4">
+          <img
+            src="./img/logo-light.svg"
+            class="w-[120px] h-auto dark:hidden"
+            alt="Logo"
+          />
+          <img
+            src="./img/logo-dark.svg"
+            class="w-[120px] h-auto hidden dark:block"
+            alt="Logo"
+          />
+        </a>
+        <!-- hambuger button -->
+        <button
+          data-collapse-toggle="navbar-dropdown"
+          type="button"
+          class="group relative h-6 w-6 cursor-pointer xl:hidden"
+          aria-controls="navbar-dropdown"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Open main menu</span>
+          <span
+            class="absolute left-0 top-1 h-0.5 w-full rounded-sm bg-black dark:bg-white transition-all duration-300 group-aria-expanded:top-[11px] group-aria-expanded:rotate-45"
+          ></span>
+          <span
+            class="absolute left-0 top-[11px] h-0.5 w-full rounded-sm bg-black dark:bg-white transition-all duration-300 group-aria-expanded:opacity-0"
+          ></span>
+          <span
+            class="absolute left-0 top-[18px] h-0.5 w-full rounded-sm bg-black dark:bg-white transition-all duration-300 group-aria-expanded:top-[11px] group-aria-expanded:-rotate-45"
+          ></span>
+        </button>
+
+        <div
+          class="hidden w-full xl:flex xl:flex-1 xl:items-center xl:justify-between mt-4 max-h-[400px] overflow-y-auto rounded-md bg-white p-7.5 shadow-[0_8px_13px_-3px_rgba(0,0,0,0.07)] dark:bg-[#181C31] xl:mt-0 xl:max-h-none xl:overflow-visible xl:rounded-none xl:bg-transparent xl:p-0 xl:shadow-none xl:dark:bg-transparent"
+          id="navbar-dropdown"
+        >
+          <ul class="flex flex-col xl:flex-row gap-5 xl:items-center xl:gap-10">
+            <li>
+              <a href="#" class="text-primary" aria-current="page">Home</a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-waterloo hover:text-primary dark:text-gray-300"
+                >Features</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-waterloo hover:text-primary dark:text-gray-300"
+                >Blog</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-waterloo hover:text-primary dark:text-gray-300"
+                >Docs</a
+              >
+            </li>
+            <li class="group relative">
+              <button
+                id="dropdownNavbarLink"
+                data-collapse-toggle="dropdownNavbar"
+                class="flex items-center gap-3 cursor-pointer text-waterloo group-hover:text-primary dark:text-gray-300"
+              >
+                Pages
+                <svg
+                  class="w-3 h-3"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 10 6"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m1 1 4 4 4-4"
+                  />
+                </svg>
+              </button>
+              <!-- Dropdown menu -->
+              <div
+                id="dropdownNavbar"
+                class="hidden mt-4 pl-4 xl:block xl:absolute xl:top-full xl:-left-8 xl:z-10 xl:mt-0 xl:pl-8 xl:w-[250px] xl:pr-8 xl:py-5 xl:rounded-md xl:bg-white xl:shadow-[0_2px_19px_rgba(0,0,0,0.05)] xl:dark:bg-[#181C31] xl:invisible xl:opacity-0 xl:translate-y-10 xl:transition-all xl:duration-300 xl:group-hover:visible xl:group-hover:opacity-100 xl:group-hover:translate-y-0"
+              >
+                <ul
+                  class="flex flex-col gap-4"
+                  aria-labelledby="dropdownLargeButton"
+                >
+                  <li>
+                    <a
+                      href="#"
+                      class="text-waterloo hover:text-primary dark:text-gray-300"
+                      >Blog Grid</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="text-waterloo hover:text-primary dark:text-gray-300"
+                      >Sign In</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="text-waterloo hover:text-primary dark:text-gray-300"
+                      >Sign Up</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="text-waterloo hover:text-primary dark:text-gray-300"
+                      >Docs</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="text-waterloo hover:text-primary dark:text-gray-300"
+                      >Support</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="text-waterloo hover:text-primary dark:text-gray-300"
+                      >404</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li>
+              <a
+                href="#"
+                class="text-waterloo hover:text-primary dark:text-gray-300"
+                >Support</a
+              >
+            </li>
+          </ul>
+          <div class="mt-7 flex items-center gap-6 xl:mt-0">
+            <button
+              type="button"
+              class="text-waterloo hidden sm:flex h-[38px] w-[38px] items-center justify-center rounded-full text-waterloo cursor-pointer"
+            >
+              <svg
+                class="w-5 h-5"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"
+                />
+              </svg>
+            </button>
+            <button
+              id="theme-toggle"
+              type="button"
+              class="flex h-[38px] w-[38px] items-center justify-center rounded-full text-black dark:text-white cursor-pointer"
+            >
+              <img
+                id="theme-toggle-dark-icon"
+                class="hidden"
+                width="21"
+                height="21"
+                src="./img/icon-moon.svg"
+              />
+              <img
+                id="theme-toggle-light-icon"
+                class="hidden"
+                width="21"
+                height="21"
+                src="./img/icon-sun.svg"
+              />
+            </button>
+            <a
+              href="#"
+              class="font-medium text-waterloo hover:text-primary dark:text-gray-300"
+              >Sign In</a
+            >
+            <a
+              href="#"
+              class="flex items-center justify-center rounded-full bg-primary px-7.5 py-2.5 text-white duration-300 ease-in-out hover:bg-[#0062ED]"
+              >Sign Up</a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
     <!-- Main -->
     <main>
       <!-- Hero -->
@@ -63,5 +308,54 @@
     <!-- ======SCRIPT====== -->
     <!-- Flowbite -->
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <!-- Dark mode switcher  -->
+    <script>
+      var themeToggleDarkIcon = document.getElementById(
+        "theme-toggle-dark-icon",
+      );
+      var themeToggleLightIcon = document.getElementById(
+        "theme-toggle-light-icon",
+      );
+
+      // Change the icons inside the button based on previous settings
+      if (
+        localStorage.getItem("color-theme") === "dark" ||
+        (!("color-theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        themeToggleLightIcon.classList.remove("hidden");
+      } else {
+        themeToggleDarkIcon.classList.remove("hidden");
+      }
+
+      var themeToggleBtn = document.getElementById("theme-toggle");
+
+      themeToggleBtn.addEventListener("click", function () {
+        // toggle icons inside button
+        themeToggleDarkIcon.classList.toggle("hidden");
+        themeToggleLightIcon.classList.toggle("hidden");
+
+        // if set via local storage previously
+        if (localStorage.getItem("color-theme")) {
+          if (localStorage.getItem("color-theme") === "light") {
+            document.documentElement.classList.add("dark");
+            localStorage.setItem("color-theme", "dark");
+          } else {
+            document.documentElement.classList.remove("dark");
+            localStorage.setItem("color-theme", "light");
+          }
+
+          // if NOT set via local storage previously
+        } else {
+          if (document.documentElement.classList.contains("dark")) {
+            document.documentElement.classList.remove("dark");
+            localStorage.setItem("color-theme", "light");
+          } else {
+            document.documentElement.classList.add("dark");
+            localStorage.setItem("color-theme", "dark");
+          }
+        }
+      });
+    </script>
   </body>
 </html>

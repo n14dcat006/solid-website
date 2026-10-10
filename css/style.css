@@ -1,0 +1,19 @@
+/* header css */
+#header {
+  --header-bg: white;
+  animation: header__scroll linear both;
+  animation-timeline: scroll();
+  animation-range: 60px 80px;
+}
+
+.dark #header {
+  --header-bg: #181c31;
+}
+
+@keyframes header__scroll {
+  to {
+    background-color: var(--header-bg);
+    box-shadow: 0 1px 3px rgb(0 0 0 / 0.1);
+    padding-block: 1rem;
+  }
+}

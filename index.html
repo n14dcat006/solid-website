@@ -25,7 +25,11 @@
         document.documentElement.classList.remove("dark");
       }
     </script>
-
+    <!-- Animate.style css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <!-- Tailwind  -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style type="text/tailwindcss">
@@ -45,6 +49,11 @@
         --color-blackho: #2c3149;
         --color-btndark: #292e45;
         --shadow-solid-l: 0px 10px 120px 0px rgba(45, 74, 170, 0.1);
+        /* brand */
+
+        --color-alabaster: #fbfbfb;
+        --color-stroke: #eeeeee;
+        --color-strokedark: #2d2f40;
       }
     </style>
 
@@ -354,7 +363,107 @@
         </div>
       </section>
       <!-- Brands -->
-      <section></section>
+      <section
+        class="border-y border-stroke bg-alabaster py-11 dark:border-strokedark dark:bg-black"
+      >
+        <div class="max-w-[1390px] mx-auto px-4 md:px-8 2xl:px-0">
+          <div
+            class="grid grid-cols-3 items-center justify-center gap-7.5 md:grid-cols-6 lg:gap-12.5 xl:gap-29"
+          >
+            <a
+              href="#"
+              class="block h-10 w-[98px] wow animate__animated animate__fadeInDown"
+              data-wow-delay="0s"
+            >
+              <img
+                src="./img/brand-light-01.svg"
+                alt="Logo Brand"
+                class="h-full w-full opacity-65 transition-all duration-300 hover:opacity-100 dark:hidden"
+              />
+              <img
+                src="./img/brand-dark-01.svg"
+                alt="Logo Brand"
+                class="hidden h-full w-full opacity-50 transition-all duration-300 hover:opacity-100 dark:block"
+              /> </a
+            ><a
+              href="#"
+              class="block h-10 w-[98px] wow animate__animated animate__fadeInDown"
+              data-wow-delay="0.1s"
+            >
+              <img
+                src="./img/brand-light-02.svg"
+                alt="Logo Brand"
+                class="h-full w-full opacity-65 transition-all duration-300 hover:opacity-100 dark:hidden"
+              />
+              <img
+                src="./img/brand-dark-02.svg"
+                alt="Logo Brand"
+                class="hidden h-full w-full opacity-50 transition-all duration-300 hover:opacity-100 dark:block"
+              /> </a
+            ><a
+              href="#"
+              class="block h-10 w-[98px] wow animate__animated animate__fadeInDown"
+              data-wow-delay="0.2s"
+            >
+              <img
+                src="./img/brand-light-03.svg"
+                alt="Logo Brand"
+                class="h-full w-full opacity-65 transition-all duration-300 hover:opacity-100 dark:hidden"
+              />
+              <img
+                src="./img/brand-dark-03.svg"
+                alt="Logo Brand"
+                class="hidden h-full w-full opacity-50 transition-all duration-300 hover:opacity-100 dark:block"
+              /> </a
+            ><a
+              href="#"
+              class="block h-10 w-[98px] wow animate__animated animate__fadeInDown"
+              data-wow-delay="0.3s"
+            >
+              <img
+                src="./img/brand-light-04.svg"
+                alt="Logo Brand"
+                class="h-full w-full opacity-65 transition-all duration-300 hover:opacity-100 dark:hidden"
+              />
+              <img
+                src="./img/brand-dark-04.svg"
+                alt="Logo Brand"
+                class="hidden h-full w-full opacity-50 transition-all duration-300 hover:opacity-100 dark:block"
+              /> </a
+            ><a
+              href="#"
+              class="block h-10 w-[98px] wow animate__animated animate__fadeInDown"
+              data-wow-delay="0.4s"
+            >
+              <img
+                src="./img/brand-light-05.svg"
+                alt="Logo Brand"
+                class="h-full w-full opacity-65 transition-all duration-300 hover:opacity-100 dark:hidden"
+              />
+              <img
+                src="./img/brand-dark-05.svg"
+                alt="Logo Brand"
+                class="hidden h-full w-full opacity-50 transition-all duration-300 hover:opacity-100 dark:block"
+              /> </a
+            ><a
+              href="#"
+              class="block h-10 w-[98px] wow animate__animated animate__fadeInDown"
+              data-wow-delay="0.5s"
+            >
+              <img
+                src="./img/brand-light-06.svg"
+                alt="Logo Brand"
+                class="h-full w-full opacity-65 transition-all duration-300 hover:opacity-100 dark:hidden"
+              />
+              <img
+                src="./img/brand-dark-06.svg"
+                alt="Logo Brand"
+                class="hidden h-full w-full opacity-50 transition-all duration-300 hover:opacity-100 dark:block"
+              />
+            </a>
+          </div>
+        </div>
+      </section>
       <!-- Features -->
       <section></section>
       <!-- About (top) -->
@@ -435,6 +544,11 @@
           }
         }
       });
+    </script>
+    <!-- Wow js -->
+    <script src="./libs/wow/wow.min.js"></script>
+    <script>
+      new WOW().init();
     </script>
   </body>
 </html>

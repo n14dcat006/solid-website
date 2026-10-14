@@ -76,6 +76,15 @@
         --text-metatitle2--line-height: 32px;
         /* About (bottom)   */
         --color-titlebg2: #ffeac2;
+        /* Features */
+        --shadow-solid-5: 0px 8px 24px 0px rgba(45, 74, 170, 0.08);
+        --shadow-solid-6: 0px 8px 24px 0px rgba(10, 16, 35, 0.08);
+        --text-metatitle3: 18px;
+        --text-metatitle3--line-height: 26px;
+        --text-regular: 16px;
+        --text-regular--line-height: 26px;
+        --text-sectiontitle2: 40px;
+        --text-sectiontitle2--line-height: 52px;
       }
     </style>
 
@@ -798,7 +807,250 @@
         </div>
       </section>
       <!-- Features Tab -->
-      <section></section>
+      <section class="relative pb-20 pt-18.5 lg:pb-22.5">
+        <div class="relative max-w-[1390px] mx-auto px-4 md:px-8 2xl:px-0">
+          <div class="absolute -top-16 -z-1 h-[350px] w-[90%]">
+            <img
+              src="./img/shape-dotted-light.svg"
+              alt=""
+              class="absolute inset-0 h-full w-full dark:hidden"
+            />
+            <img
+              src="./img/shape-dotted-dark.svg"
+              alt=""
+              class="absolute inset-0 hidden h-full w-full dark:block"
+            />
+          </div>
+
+          <ul
+            class="wow animate__animated animate__fadeInDown mb-15 flex flex-wrap justify-center rounded-[10px] border border-stroke bg-white shadow-solid-5 dark:border-strokedark dark:bg-blacksection dark:shadow-solid-6 md:flex-nowrap md:items-center lg:gap-7.5 xl:mb-21.5 xl:gap-12.5"
+            id="feature-tabs"
+            role="tablist"
+            data-tabs-toggle="#feature-tabs-content"
+            data-tabs-active-classes="before:bg-primary"
+            data-tabs-inactive-classes="before:bg-transparent"
+            data-wow-duration="0.5s"
+            data-wow-delay="0.1s"
+          >
+            <li
+              class="w-full border-b border-stroke last:border-0 dark:border-strokedark md:w-auto md:border-0"
+              role="presentation"
+            >
+              <button
+                class="relative flex w-full cursor-pointer items-center gap-4 px-6 py-2 text-left xl:px-13.5 xl:py-5 before:absolute before:bottom-0 before:left-0 before:h-1 before:w-full before:rounded-t-[4px]"
+                id="feature-tab-1"
+                data-tabs-target="#feature-panel-1"
+                type="button"
+                role="tab"
+                aria-controls="feature-panel-1"
+                aria-selected="true"
+              >
+                <span
+                  class="flex h-12.5 w-12.5 items-center justify-center rounded-full border border-stroke dark:border-strokedark dark:bg-blacksection"
+                >
+                  <span
+                    class="text-metatitle3 font-medium text-black dark:text-white"
+                    >01</span
+                  >
+                </span>
+                <span
+                  class="block text-sm font-medium text-black dark:text-white md:w-3/5 lg:w-auto xl:text-regular"
+                  >Clean User Interface</span
+                >
+              </button>
+            </li>
+            <li
+              class="w-full border-b border-stroke last:border-0 dark:border-strokedark md:w-auto md:border-0"
+              role="presentation"
+            >
+              <button
+                class="relative flex w-full cursor-pointer items-center gap-4 px-6 py-2 text-left xl:px-13.5 xl:py-5 before:absolute before:bottom-0 before:left-0 before:h-1 before:w-full before:rounded-t-[4px]"
+                id="feature-tab-2"
+                data-tabs-target="#feature-panel-2"
+                type="button"
+                role="tab"
+                aria-controls="feature-panel-2"
+                aria-selected="false"
+              >
+                <span
+                  class="flex h-12.5 w-12.5 items-center justify-center rounded-full border border-stroke dark:border-strokedark dark:bg-blacksection"
+                >
+                  <span
+                    class="text-metatitle3 font-medium text-black dark:text-white"
+                    >02</span
+                  >
+                </span>
+                <span
+                  class="block text-sm font-medium text-black dark:text-white md:w-3/5 lg:w-auto xl:text-regular"
+                  >Essential Business Pages</span
+                >
+              </button>
+            </li>
+            <li
+              class="w-full border-b border-stroke last:border-0 dark:border-strokedark md:w-auto md:border-0"
+              role="presentation"
+            >
+              <button
+                class="relative flex w-full cursor-pointer items-center gap-4 px-6 py-2 text-left xl:px-13.5 xl:py-5 before:absolute before:bottom-0 before:left-0 before:h-1 before:w-full before:rounded-t-[4px]"
+                id="feature-tab-3"
+                data-tabs-target="#feature-panel-3"
+                type="button"
+                role="tab"
+                aria-controls="feature-panel-3"
+                aria-selected="false"
+              >
+                <span
+                  class="flex h-12.5 w-12.5 items-center justify-center rounded-full border border-stroke dark:border-strokedark dark:bg-blacksection"
+                >
+                  <span
+                    class="text-metatitle3 font-medium text-black dark:text-white"
+                    >03</span
+                  >
+                </span>
+                <span
+                  class="block text-sm font-medium text-black dark:text-white md:w-3/5 lg:w-auto xl:text-regular"
+                  >Fully Functional Integrations</span
+                >
+              </button>
+            </li>
+          </ul>
+          <div
+            id="feature-tabs-content"
+            class="wow animate__animated animate__fadeInDown mx-auto max-w-[1154px]"
+            data-wow-duration="0.5s"
+            data-wow-delay="0.5s"
+          >
+            <div
+              id="feature-panel-1"
+              role="tabpanel"
+              aria-labelledby="feature-tab-1"
+            >
+              <div class="flex items-center gap-8 lg:gap-19">
+                <div class="md:w-1/2">
+                  <h2
+                    class="mb-7 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle2"
+                  >
+                    Solid UI with Solid Features.
+                  </h2>
+                  <p
+                    class="mb-5 text-base/[26px] text-waterloo dark:text-manatee"
+                  >
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                    ultricies lacus non fermentum ultrices. Fusce consectetur
+                    le.
+                  </p>
+                  <p
+                    class="w-11/12 text-base/[26px] text-waterloo dark:text-manatee"
+                  >
+                    Nam id eleifend dui, id iaculis purus. Etiam lobortis neque
+                    nec finibus sagittis. Nulla ligula nunc egestas ut.
+                  </p>
+                </div>
+                <div
+                  class="relative mx-auto hidden aspect-[562/366] max-w-[550px] md:block md:w-1/2"
+                >
+                  <img
+                    src="./img/features-light-01.webp"
+                    alt=""
+                    class="absolute inset-0 h-full w-full dark:hidden"
+                  />
+                  <img
+                    src="./img/features-dark-01.svg"
+                    alt=""
+                    class="absolute inset-0 hidden h-full w-full dark:block"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="hidden"
+              id="feature-panel-2"
+              role="tabpanel"
+              aria-labelledby="feature-tab-2"
+            >
+              <div class="flex items-center gap-8 lg:gap-19">
+                <div class="md:w-1/2">
+                  <h2
+                    class="mb-7 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle2"
+                  >
+                    Pages and UI Components You Need for a SaaS.
+                  </h2>
+                  <p
+                    class="mb-5 text-base/[26px] text-waterloo dark:text-manatee"
+                  >
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                    ultricies lacus non fermentum ultrices. Fusce consectetur
+                    le.
+                  </p>
+                  <p
+                    class="w-11/12 text-base/[26px] text-waterloo dark:text-manatee"
+                  >
+                    Nam id eleifend dui, id iaculis purus. Etiam lobortis neque
+                    nec finibus sagittis. Nulla ligula nunc egestas ut.
+                  </p>
+                </div>
+                <div
+                  class="relative mx-auto hidden aspect-[562/366] max-w-[550px] md:block md:w-1/2"
+                >
+                  <img
+                    src="./img/features-light-01.webp"
+                    alt=""
+                    class="absolute inset-0 h-full w-full dark:hidden"
+                  />
+                  <img
+                    src="./img/features-dark-01.svg"
+                    alt=""
+                    class="absolute inset-0 hidden h-full w-full dark:block"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="hidden"
+              id="feature-panel-3"
+              role="tabpanel"
+              aria-labelledby="feature-tab-3"
+            >
+              <div class="flex items-center gap-8 lg:gap-19">
+                <div class="md:w-1/2">
+                  <h2
+                    class="mb-7 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle2"
+                  >
+                    Functional Blog, DB, Auth and Many More
+                  </h2>
+                  <p
+                    class="mb-5 text-base/[26px] text-waterloo dark:text-manatee"
+                  >
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                    ultricies lacus non fermentum ultrices. Fusce consectetur
+                    le.
+                  </p>
+                  <p
+                    class="w-11/12 text-base/[26px] text-waterloo dark:text-manatee"
+                  >
+                    Nam id eleifend dui, id iaculis purus. Etiam lobortis neque
+                    nec finibus sagittis. Nulla ligula nunc egestas ut.
+                  </p>
+                </div>
+                <div
+                  class="relative mx-auto hidden aspect-[562/366] max-w-[550px] md:block md:w-1/2"
+                >
+                  <img
+                    src="./img/features-light-01.webp"
+                    alt=""
+                    class="absolute inset-0 h-full w-full dark:hidden"
+                  />
+                  <img
+                    src="./img/features-dark-01.svg"
+                    alt=""
+                    class="absolute inset-0 hidden h-full w-full dark:block"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <!-- Fun Fact -->
       <section></section>
       <!-- Integration -->

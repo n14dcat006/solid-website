@@ -106,6 +106,39 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
+
+    <!-- swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+    <style>
+      #testimonials .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+        margin: 0 3px;
+        background: #e5e7eb;
+        opacity: 1;
+        border-radius: 9999px;
+        transition:
+          width 0.3s ease,
+          background-color 0.3s ease;
+      }
+
+      #testimonials .swiper-pagination-bullet-active {
+        width: 24px;
+        background: #006bff;
+      }
+
+      .dark #testimonials .swiper-pagination-bullet {
+        background: #ffffff;
+      }
+
+      .dark #testimonials .swiper-pagination-bullet-active {
+        background: #006bff;
+      }
+    </style>
+
     <!-- Project CSS -->
     <link rel="stylesheet" href="./css/style.css" />
   </head>
@@ -1145,25 +1178,1660 @@
           </dl>
         </div>
       </section>
+      <!-- 
+      /
+      /
+      /
+      /
+      /
+      /
+       -->
+
       <!-- Integration -->
-      <section></section>
+      <section class="relative px-4 py-12 md:px-8 md:py-14 lg:py-16">
+        <!-- Dark mode dotted background -->
+        <div
+          class="pointer-events-none absolute left-1/2 top-[220px] z-0 hidden h-[400px] w-[90%] max-w-[960px] -translate-x-1/2 bg-[radial-gradient(circle,_#303751_1px,_transparent_1px)] bg-[length:14px_14px] opacity-50 dark:block"
+        ></div>
+        <div
+          class="wow animate__fadeInDown relative z-10 mx-auto max-w-[1390px]"
+          data-wow-duration="2s"
+          data-wow-offset="80"
+        >
+          <!-- Section title -->
+          <div class="mx-auto text-center md:w-4/5 xl:w-1/2">
+            <span
+              class="inline-block rounded-full bg-[#EDF5FF] px-5 py-3 text-sm font-medium text-[#181C31] dark:border dark:border-[#292E45] dark:bg-[#1C2136] dark:text-white"
+            >
+              INTEGRATIONS
+            </span>
+
+            <h2
+              class="dark:text-white mx-auto mt-6 max-w-[600px] text-3xl font-bold text-[#181C31] sm:text-4xl"
+            >
+              Packed with all the key integrations you need
+            </h2>
+
+            <p
+              class="dark:text-[#959CB1] mt-6 text-base leading-relaxed text-[#757693]"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+              convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam
+              ante in maximus.
+            </p>
+          </div>
+
+          <!-- Integration logo -->
+          <div
+            class="pattern-dots pattern-blue-500 pattern-bg-white pattern-size-4 pattern-opacity-10 relative mx-auto mt-16 max-w-[1154px] md:mt-20"
+          >
+            <div class="flex flex-wrap gap-y-14">
+              <!-- top row -->
+
+              <!-- Slack -->
+              <div class="flex w-1/6">
+                <div
+                  class="flex aspect-square w-full max-w-[56px] items-center justify-center rounded-[10px] bg-white shadow-[0_8px_30px_rgba(0,0,0,0.10)] sm:h-[86px] sm:w-[86px] sm:max-w-none dark:bg-[#292E45] dark:shadow-[0_8px_30px_rgba(0,0,0,0.08)]"
+                >
+                  <img
+                    src="./img/slack.svg"
+                    alt="Slack"
+                    class="h-8 w-8 object-contain sm:h-[50px] sm:w-[50px]"
+                  />
+                </div>
+              </div>
+
+              <!-- empty -->
+              <div class="w-1/6"></div>
+
+              <!-- Trello -->
+              <div class="flex w-1/6">
+                <div
+                  class="flex aspect-square w-full max-w-[56px] items-center justify-center rounded-[10px] bg-white shadow-[0_8px_30px_rgba(0,0,0,0.10)] sm:h-[86px] sm:w-[86px] sm:max-w-none dark:bg-[#292E45] dark:shadow-[0_8px_30px_rgba(0,0,0,0.08)]"
+                >
+                  <img
+                    src="./img/trello.svg"
+                    alt="Trello"
+                    class="h-8 w-8 object-contain sm:h-[50px] sm:w-[50px]"
+                  />
+                </div>
+              </div>
+
+              <!-- yellow dot -->
+              <div class="relative w-1/6">
+                <div
+                  class="absolute left-2 top-0 h-[10px] w-[10px] rounded-full bg-[#FFD629]"
+                ></div>
+              </div>
+
+              <!-- Skype -->
+              <div class="flex w-1/6">
+                <div
+                  class="flex aspect-square w-full max-w-[56px] items-center justify-center rounded-[10px] bg-white shadow-[0_8px_30px_rgba(0,0,0,0.10)] sm:h-[86px] sm:w-[86px] sm:max-w-none dark:bg-[#292E45] dark:shadow-[0_8px_30px_rgba(0,0,0,0.08)]"
+                >
+                  <img
+                    src="./img/skype.svg"
+                    alt="Skype"
+                    class="h-8 w-8 object-contain sm:h-[50px] sm:w-[50px]"
+                  />
+                </div>
+              </div>
+
+              <!-- empty -->
+              <div class="w-1/6"></div>
+
+              <!-- bot row-->
+
+              <!-- green dot-->
+              <div class="relative w-1/6">
+                <div
+                  class="absolute left-0 top-0 h-[18px] w-[18px] rounded-full bg-[#5BE89D] sm:-top-20 sm:left-auto sm:right-16"
+                ></div>
+              </div>
+
+              <!-- Discord -->
+              <div class="flex w-1/6">
+                <div
+                  class="flex aspect-square w-full max-w-[56px] items-center justify-center rounded-[10px] bg-white shadow-[0_8px_30px_rgba(0,0,0,0.10)] sm:h-[86px] sm:w-[86px] sm:max-w-none dark:bg-[#292E45] dark:shadow-[0_8px_30px_rgba(0,0,0,0.08)]"
+                >
+                  <img
+                    src="./img/discord.svg"
+                    alt="Discord"
+                    class="h-8 w-8 object-contain sm:h-[50px] sm:w-[50px]"
+                  />
+                </div>
+              </div>
+
+              <!-- orange dot-->
+              <div class="relative w-1/6">
+                <div
+                  class="absolute right-0 top-0 h-[22px] w-[22px] rounded-full bg-[#F05A00] sm:right-16"
+                ></div>
+              </div>
+
+              <!--Application S -->
+              <div class="flex w-1/6">
+                <div
+                  class="flex aspect-square w-full max-w-[56px] items-center justify-center rounded-[10px] bg-white shadow-[0_8px_30px_rgba(0,0,0,0.10)] sm:h-[86px] sm:w-[86px] sm:max-w-none dark:bg-[#292E45] dark:shadow-[0_8px_30px_rgba(0,0,0,0.08)]"
+                >
+                  <img
+                    src="./img/appS.svg"
+                    alt="Application S"
+                    class="h-8 w-8 object-contain sm:h-[50px] sm:w-[50px]"
+                  />
+                </div>
+              </div>
+
+              <!-- blue dot -->
+              <div class="relative w-1/6">
+                <div
+                  class="absolute right-0 top-0 h-[14px] w-[14px] rounded-full bg-[#087BFF] sm:right-16"
+                ></div>
+              </div>
+
+              <!-- ClickUp -->
+              <div class="flex w-1/6">
+                <div
+                  class="flex aspect-square w-full max-w-[56px] items-center justify-center rounded-[10px] bg-white shadow-[0_8px_30px_rgba(0,0,0,0.10)] sm:h-[86px] sm:w-[86px] sm:max-w-none dark:bg-[#292E45] dark:shadow-[0_8px_30px_rgba(0,0,0,0.08)]"
+                >
+                  <img
+                    src="./img/clickup.svg"
+                    alt="ClickUp"
+                    class="h-8 w-8 object-contain sm:h-[50px] sm:w-[50px]"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- CTA -->
-      <section></section>
+      <section
+        class="overflow-hidden px-4 py-12 md:px-8 md:py-14 lg:py-16 2xl:px-0"
+      >
+        <div
+          class="mx-auto max-w-[1390px] rounded-lg bg-gradient-to-t from-[#F8F9FF] to-[#DEE7FF] px-[30px] py-[50px] dark:bg-[#1D2339] dark:from-transparent dark:to-transparent md:px-[50px] xl:min-h-[350px] xl:px-[70px] xl:py-0"
+        >
+          <div
+            class="flex flex-wrap gap-8 md:flex-nowrap md:items-center md:justify-between md:gap-0 xl:min-h-[350px]"
+          >
+            <!-- CTA content -->
+            <div
+              class="wow animate__fadeInLeft w-full md:w-[55%] lg:w-1/2"
+              data-wow-duration="2s"
+              data-wow-offset="80"
+            >
+              <h2
+                class="mb-4 text-3xl font-bold leading-snug text-[#181C31] dark:text-white xl:text-[34px]"
+              >
+                Join With Us Today & Increase Your Productivity
+              </h2>
+
+              <p
+                class="text-base leading-relaxed text-[#757693] dark:text-[#959CB1]"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+                convallis tortor eros. Donec vitae tortor lacus. Phasellus
+                aliquam ante in maximus.
+              </p>
+            </div>
+
+            <!-- CTA image + button -->
+            <div
+              class="wow animate__fadeInRight w-full md:w-[42%] lg:w-[45%]"
+              data-wow-duration="2s"
+              data-wow-offset="80"
+            >
+              <div
+                class="flex items-center justify-start gap-6 md:justify-end xl:justify-between"
+              >
+                <!-- Illustration -->
+                <img
+                  src="./img/shape-06.webp"
+                  alt="Rocket illustration"
+                  width="384"
+                  height="299"
+                  class="hidden h-auto xl:block xl:w-[280px] 2xl:w-[350px]"
+                />
+
+                <!-- Sign up button -->
+                <a
+                  href="https://youtu.be/dQw4w9WgXcQ?si=R60Hp9Nd_NecrD1D"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex shrink-0 items-center gap-2.5 rounded-full bg-[#181C31] px-6 py-3 font-medium text-white transition-opacity hover:opacity-90 dark:bg-white dark:text-[#181C31]"
+                >
+                  Sign up free
+
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 12H19M19 12L13 6M19 12L13 18"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- FAQ -->
-      <section></section>
-      <!-- Testimonial -->
-      <section></section>
+      <section
+        id="faq"
+        class="relative overflow-hidden bg-white dark:bg-[#181C31] py-12 md:py-14 lg:py-16"
+      >
+        <div class="relative mx-auto max-w-[1235px] px-4 md:px-8 xl:px-0">
+          <!-- Dotted background -->
+          <div
+            class="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle,#DEE3EF_1px,transparent_1px)] bg-[length:20px_20px] opacity-60 dark:bg-[radial-gradient(circle,#30374C_1px,transparent_1px)] dark:opacity-20"
+          ></div>
+
+          <!-- FAQ content -->
+          <div
+            class="relative z-10 flex flex-wrap gap-8 md:flex-nowrap md:items-start lg:gap-16 xl:gap-24"
+          >
+            <!-- Left content -->
+            <div
+              class="wow animate__fadeInLeft w-full md:w-2/5 lg:w-1/2"
+              data-wow-duration="1s"
+              data-wow-offset="80"
+            >
+              <span
+                class="font-medium uppercase text-[#181C31] dark:text-white"
+              >
+                OUR FAQS
+              </span>
+
+              <h2
+                class="relative mb-8 mt-4 text-3xl font-bold leading-tight text-[#181C31] dark:text-white sm:text-4xl xl:text-[46px]"
+              >
+                Frequently Asked
+
+                <span class="block">
+                  <span
+                    class="bg-gradient-to-t from-[#FFE8BA] from-[22%] to-transparent to-[22%] dark:from-[#41465C]"
+                  >
+                    Questions
+                  </span>
+                </span>
+              </h2>
+
+              <a
+                href="#"
+                class="group mt-10 inline-flex items-center gap-2.5 font-medium text-[#181C31] hover:text-[#006BFF] dark:text-white dark:hover:text-[#006BFF]"
+              >
+                <span>Know More</span>
+
+                <svg
+                  class="transition-transform duration-300 group-hover:translate-x-1"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5 12H19M19 12L13 6M19 12L13 18"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </div>
+
+            <!--  accordion -->
+            <div
+              class="wow animate__fadeInRight w-full min-w-0 md:flex-1"
+              data-wow-duration="2s"
+              data-wow-offset="80"
+            >
+              <div
+                id="faq-accordion"
+                class="overflow-hidden rounded-lg bg-white shadow-[0_6px_35px_rgba(0,0,0,0.04)] dark:border dark:border-[#292E45] dark:bg-[#1C2136] dark:shadow-none"
+              >
+                <!-- FAQ Item 1 -->
+                <div
+                  class="border-b border-[#E5E7EB] last:border-b-0 dark:border-[#292E45]"
+                >
+                  <button
+                    type="button"
+                    class="faq-toggle flex w-full items-center justify-between gap-5 px-6 py-5 text-left font-medium text-[#181C31] dark:text-white lg:px-9 lg:py-7"
+                    aria-expanded="false"
+                    aria-controls="faq-answer-1"
+                  >
+                    <span> Lorem ipsum dolor sit amet, consectetur </span>
+
+                    <span
+                      class="faq-icon shrink-0 text-3xl font-normal leading-none"
+                    >
+                      +
+                    </span>
+                  </button>
+
+                  <div
+                    id="faq-answer-1"
+                    class="hidden border-t border-[#E5E7EB] px-6 py-5 dark:border-[#292E45] lg:px-9 lg:py-7"
+                  >
+                    <p
+                      class="leading-relaxed text-[#757693] dark:text-[#959CB1]"
+                    >
+                      We provide digital experience services to startups and
+                      small businesses. We help our clients succeed by creating
+                      brand identities, digital experiences.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div
+                  class="border-b border-[#E5E7EB] last:border-b-0 dark:border-[#292E45]"
+                >
+                  <button
+                    type="button"
+                    class="faq-toggle flex w-full items-center justify-between gap-5 px-6 py-5 text-left font-medium text-[#181C31] dark:text-white lg:px-9 lg:py-7"
+                    aria-expanded="false"
+                    aria-controls="faq-answer-2"
+                  >
+                    <span> Lorem ipsum dolor sit amet, consectetur </span>
+
+                    <span
+                      class="faq-icon shrink-0 text-3xl font-normal leading-none"
+                    >
+                      +
+                    </span>
+                  </button>
+
+                  <div
+                    id="faq-answer-2"
+                    class="hidden border-t border-[#E5E7EB] px-6 py-5 dark:border-[#292E45] lg:px-9 lg:py-7"
+                  >
+                    <p
+                      class="leading-relaxed text-[#757693] dark:text-[#959CB1]"
+                    >
+                      We provide digital experience services to startups and
+                      small businesses. We help our clients succeed by creating
+                      brand identities, digital experiences.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div
+                  class="border-b border-[#E5E7EB] last:border-b-0 dark:border-[#292E45]"
+                >
+                  <button
+                    type="button"
+                    class="faq-toggle flex w-full items-center justify-between gap-5 px-6 py-5 text-left font-medium text-[#181C31] dark:text-white lg:px-9 lg:py-7"
+                    aria-expanded="false"
+                    aria-controls="faq-answer-3"
+                  >
+                    <span> Lorem ipsum dolor sit amet, consectetur </span>
+
+                    <span
+                      class="faq-icon shrink-0 text-3xl font-normal leading-none"
+                    >
+                      +
+                    </span>
+                  </button>
+
+                  <div
+                    id="faq-answer-3"
+                    class="hidden border-t border-[#E5E7EB] px-6 py-5 dark:border-[#292E45] lg:px-9 lg:py-7"
+                  >
+                    <p
+                      class="leading-relaxed text-[#757693] dark:text-[#959CB1]"
+                    >
+                      We provide digital experience services to startups and
+                      small businesses. We help our clients succeed by creating
+                      brand identities, digital experiences.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials -->
+      <section
+        id="testimonials"
+        class="wow animate__fadeInDown overflow-hidden bg-white dark:bg-[#181C31] py-12 md:py-14 lg:py-16"
+        data-wow-duration="2s"
+        data-wow-offset="80"
+      >
+        <div class="mx-auto max-w-[1315px] px-4 md:px-8 xl:px-0">
+          <!-- Section title -->
+          <div class="mx-auto w-full text-center">
+            <span
+              class="inline-block rounded-full bg-[#EDF5FF] px-[18px] py-3 text-sm font-medium text-[#181C31] dark:border dark:border-[#292E45] dark:bg-[#1C2136] dark:text-white"
+            >
+              TESTIMONIALS
+            </span>
+
+            <h2
+              class="mx-auto mb-5 mt-6 text-3xl font-bold text-[#181C31] dark:text-white sm:text-4xl xl:text-5xl"
+            >
+              Client’s Testimonials
+            </h2>
+
+            <p
+              class="mx-auto max-w-[750px] text-base leading-relaxed text-[#757693] dark:text-[#959CB1]"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+              convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam
+              ante in maximus.
+            </p>
+          </div>
+
+          <!-- Testimonial slider -->
+          <div class="mx-auto mt-20 lg:mt-24">
+            <div class="swiper testimonial-swiper py-5">
+              <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide !h-auto">
+                  <div
+                    class="h-full rounded-lg bg-white px-7 pb-8 pt-7 shadow-[0_8px_30px_rgba(24,28,49,0.06)] dark:border dark:border-[#292E45] dark:bg-[#1D2238] dark:shadow-none sm:px-9"
+                  >
+                    <div
+                      class="mb-7 flex items-center justify-between gap-4 border-b border-[#E5E7EB] pb-6 dark:border-[#292E45]"
+                    >
+                      <div>
+                        <h3
+                          class="mb-1 text-lg font-medium text-[#181C31] dark:text-white"
+                        >
+                          Devid Smith
+                        </h3>
+
+                        <p class="text-[#757693] dark:text-[#959CB1]">
+                          Founter @democompany
+                        </p>
+                      </div>
+
+                      <img
+                        src="./img/user-01.webp"
+                        alt="Devid Smith"
+                        class="h-[60px] w-[60px] shrink-0 rounded-full object-cover"
+                      />
+                    </div>
+
+                    <p
+                      class="leading-relaxed text-[#757693] dark:text-[#959CB1]"
+                    >
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Mauris hendrerit, ligula sit amet cursus tincidunt, lorem
+                      sem elementum nisi, convallis fringilla ante nibh non
+                      urna.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="swiper-slide !h-auto">
+                  <div
+                    class="h-full rounded-lg bg-white px-7 pb-8 pt-7 shadow-[0_8px_30px_rgba(24,28,49,0.06)] dark:border dark:border-[#292E45] dark:bg-[#1D2238] dark:shadow-none sm:px-9"
+                  >
+                    <div
+                      class="mb-7 flex items-center justify-between gap-4 border-b border-[#E5E7EB] pb-6 dark:border-[#292E45]"
+                    >
+                      <div>
+                        <h3
+                          class="mb-1 text-lg font-medium text-[#181C31] dark:text-white"
+                        >
+                          Jhon Abraham
+                        </h3>
+
+                        <p class="text-[#757693] dark:text-[#959CB1]">
+                          Founter @democompany
+                        </p>
+                      </div>
+
+                      <img
+                        src="./img/user-02.webp"
+                        alt="Jhon Abraham"
+                        class="h-[60px] w-[60px] shrink-0 rounded-full object-cover"
+                      />
+                    </div>
+
+                    <p
+                      class="leading-relaxed text-[#757693] dark:text-[#959CB1]"
+                    >
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Mauris hendrerit, ligula sit amet cursus tincidunt, lorem
+                      sem elementum nisi, convallis fringilla ante nibh non
+                      urna.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="swiper-slide !h-auto">
+                  <div
+                    class="h-full rounded-lg bg-white px-7 pb-8 pt-7 shadow-[0_8px_30px_rgba(24,28,49,0.06)] dark:border dark:border-[#292E45] dark:bg-[#1D2238] dark:shadow-none sm:px-9"
+                  >
+                    <div
+                      class="mb-7 flex items-center justify-between gap-4 border-b border-[#E5E7EB] pb-6 dark:border-[#292E45]"
+                    >
+                      <div>
+                        <h3
+                          class="mb-1 text-lg font-medium text-[#181C31] dark:text-white"
+                        >
+                          Devid Smith
+                        </h3>
+
+                        <p class="text-[#757693] dark:text-[#959CB1]">
+                          Founter @democompany
+                        </p>
+                      </div>
+
+                      <img
+                        src="./img/user-01.webp"
+                        alt="Devid Smith"
+                        class="h-[60px] w-[60px] shrink-0 rounded-full object-cover"
+                      />
+                    </div>
+
+                    <p
+                      class="leading-relaxed text-[#757693] dark:text-[#959CB1]"
+                    >
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Mauris hendrerit, ligula sit amet cursus tincidunt, lorem
+                      sem elementum nisi, convallis fringilla ante nibh non
+                      urna.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Slide 4 -->
+                <div class="swiper-slide !h-auto">
+                  <div
+                    class="h-full rounded-lg bg-white px-7 pb-8 pt-7 shadow-[0_8px_30px_rgba(24,28,49,0.06)] dark:border dark:border-[#292E45] dark:bg-[#1D2238] dark:shadow-none sm:px-9"
+                  >
+                    <div
+                      class="mb-7 flex items-center justify-between gap-4 border-b border-[#E5E7EB] pb-6 dark:border-[#292E45]"
+                    >
+                      <div>
+                        <h3
+                          class="mb-1 text-lg font-medium text-[#181C31] dark:text-white"
+                        >
+                          Jhon Abraham
+                        </h3>
+
+                        <p class="text-[#757693] dark:text-[#959CB1]">
+                          Founter @democompany
+                        </p>
+                      </div>
+
+                      <img
+                        src="./img/user-02.webp"
+                        alt="Jhon Abraham"
+                        class="h-[60px] w-[60px] shrink-0 rounded-full object-cover"
+                      />
+                    </div>
+
+                    <p
+                      class="leading-relaxed text-[#757693] dark:text-[#959CB1]"
+                    >
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Mauris hendrerit, ligula sit amet cursus tincidunt, lorem
+                      sem elementum nisi, convallis fringilla ante nibh non
+                      urna.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pagination -->
+            <div
+              class="testimonial-pagination mt-10 flex items-center justify-center"
+            ></div>
+          </div>
+        </div>
+      </section>
+
       <!-- Pricing -->
-      <section></section>
-      <!-- Contact -->
-      <section></section>
+      <section
+        id="pricing"
+        class="relative overflow-hidden bg-white dark:bg-[#181C31] py-12 md:py-14 lg:py-16"
+      >
+        <!-- Section title -->
+        <div class="mx-auto max-w-[1315px] px-4 md:px-8 xl:px-0">
+          <div
+            class="wow animate__fadeInDown mx-auto text-center"
+            data-wow-duration="1s"
+            data-wow-offset="80"
+          >
+            <!-- Label -->
+            <span
+              class="mb-4 inline-block rounded-full bg-[#EDF5FF] px-[18px] py-3 text-sm font-medium text-[#181C31] dark:border dark:border-[#292E45] dark:bg-[#1C2136] dark:text-white"
+            >
+              PRICING PLANS
+            </span>
+
+            <!-- Title -->
+            <h2
+              class="mx-auto mb-5 text-3xl font-bold text-[#181C31] dark:text-white sm:text-4xl xl:text-[46px]"
+            >
+              Simple Pricing
+            </h2>
+
+            <!-- Description -->
+            <p
+              class="mx-auto max-w-[750px] text-base leading-relaxed text-[#757693] dark:text-[#959CB1]"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+              convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam
+              ante in maximus.
+            </p>
+          </div>
+        </div>
+
+        <!-- Pricing cards container -->
+        <div
+          class="relative mx-auto mt-16 max-w-[1207px] px-4 md:px-8 xl:mt-20 xl:px-0"
+        >
+          <!-- Dotted background -->
+          <div
+            class="pointer-events-none absolute inset-x-8 bottom-0 top-12 bg-[radial-gradient(circle,_#CBD5E1_1px,_transparent_1px)] bg-[length:18px_18px] opacity-30 dark:opacity-10"
+          ></div>
+
+          <!-- Cards -->
+          <div
+            class="relative z-10 flex flex-wrap justify-center gap-7 lg:flex-nowrap xl:gap-12"
+          >
+            <!-- Small Pack -->
+            <div
+              class="wow animate__fadeInDown group relative flex h-full w-full min-w-0 flex-col rounded-lg border border-[#E5E7EB] bg-white p-7 shadow-[0_8px_35px_rgba(24,28,49,0.05)] dark:border-[#292E45] dark:bg-[#1D2238] dark:shadow-none md:w-[calc(50%-14px)] md:flex-none lg:w-auto lg:flex-1 sm:p-8 xl:p-10"
+              data-wow-duration="1s"
+              data-wow-offset="80"
+            >
+              <!-- Price -->
+              <h3 class="mb-8 text-[#181C31] dark:text-white">
+                <span class="text-[42px] font-bold leading-none"> $ 100 </span>
+                <span
+                  class="text-sm font-medium text-[#757693] dark:text-[#959CB1]"
+                >
+                  /month
+                </span>
+              </h3>
+
+              <!-- Pack name -->
+              <h4
+                class="mb-3 text-xl font-medium text-[#181C31] dark:text-white"
+              >
+                Small Pack
+              </h4>
+
+              <!-- Description -->
+              <p class="leading-relaxed text-[#757693] dark:text-[#959CB1]">
+                Lorem ipsum dolor sit amet,<br />
+                consec adipiscing elit.
+              </p>
+
+              <!-- Features -->
+              <div
+                class="mt-9 border-t border-[#E5E7EB] pb-4 pt-9 dark:border-[#292E45]"
+              >
+                <ul class="space-y-4">
+                  <li class="text-[#181C31] dark:text-[#959CB1]">
+                    300 GB Storage
+                  </li>
+
+                  <li class="text-[#181C31] dark:text-[#959CB1]">
+                    Unlimited Photos and Videos
+                  </li>
+
+                  <li class="text-[#181C31] opacity-40 dark:text-[#959CB1]">
+                    Exclusive Support
+                  </li>
+
+                  <li class="text-[#181C31] opacity-40 dark:text-[#959CB1]">
+                    Custom Branding Strategy
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Button -->
+              <button
+                type="button"
+                aria-label="Get Small Pack"
+                class="group/btn mt-auto inline-flex w-fit items-center gap-2.5 pt-10 font-medium text-[#006BFF] transition-colors duration-300 dark:text-white dark:hover:text-[#006BFF]"
+              >
+                <span>Get the Plan</span>
+
+                <svg
+                  class="transition-transform duration-300 group-hover/btn:translate-x-1.5"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5 12H19M19 12L13 6M19 12L13 18"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <!-- Medium Pack -->
+            <div
+              class="wow animate__fadeInDown group relative flex h-full w-full min-w-0 flex-col rounded-lg border border-[#E5E7EB] bg-white p-7 shadow-[0_8px_35px_rgba(24,28,49,0.05)] dark:border-[#292E45] dark:bg-[#1D2238] dark:shadow-none md:w-[calc(50%-14px)] md:flex-none lg:w-auto lg:flex-1 sm:p-8 xl:p-10"
+              data-wow-duration="1s"
+              data-wow-offset="80"
+              data-wow-delay="0.1s"
+            >
+              <!-- Popular ribbon -->
+              <div
+                class="absolute right-4 top-0 flex h-[86px] w-[30px] items-center justify-center rounded-b-full bg-[#006BFF]"
+              >
+                <span
+                  class="-rotate-90 whitespace-nowrap text-[10px] font-semibold uppercase text-white"
+                >
+                  POPULAR
+                </span>
+              </div>
+
+              <!-- Price -->
+              <h3 class="mb-8 text-[#181C31] dark:text-white">
+                <span class="text-[42px] font-bold leading-none"> $ 200 </span>
+                <span
+                  class="text-sm font-medium text-[#757693] dark:text-[#959CB1]"
+                >
+                  /month
+                </span>
+              </h3>
+
+              <!-- Pack name -->
+              <h4
+                class="mb-3 text-xl font-medium text-[#181C31] dark:text-white"
+              >
+                Medium Pack
+              </h4>
+
+              <!-- Description -->
+              <p class="leading-relaxed text-[#757693] dark:text-[#959CB1]">
+                Lorem ipsum dolor sit amet,<br />
+                consec adipiscing elit.
+              </p>
+
+              <!-- Features -->
+              <div
+                class="mt-9 border-t border-[#E5E7EB] pb-4 pt-9 dark:border-[#292E45]"
+              >
+                <ul class="space-y-4">
+                  <li class="text-[#181C31] dark:text-[#959CB1]">
+                    300 GB Storage
+                  </li>
+
+                  <li class="text-[#181C31] dark:text-[#959CB1]">
+                    Unlimited Photos and Videos
+                  </li>
+
+                  <li class="text-[#181C31] dark:text-[#959CB1]">
+                    Exclusive Support
+                  </li>
+
+                  <li class="text-[#181C31] opacity-40 dark:text-[#959CB1]">
+                    Custom Branding Strategy
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Button -->
+              <button
+                type="button"
+                aria-label="Get Medium Pack"
+                class="group/btn mt-auto inline-flex w-fit items-center gap-2.5 pt-10 font-medium text-[#006BFF] transition-colors duration-300 dark:text-white dark:hover:text-[#006BFF]"
+              >
+                <span>Get the Plan</span>
+
+                <svg
+                  class="transition-transform duration-300 group-hover/btn:translate-x-1.5"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5 12H19M19 12L13 6M19 12L13 18"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <!-- Large Pack -->
+            <div
+              class="wow animate__fadeInDown group relative flex h-full w-full min-w-0 flex-col rounded-lg border border-[#E5E7EB] bg-white p-7 shadow-[0_8px_35px_rgba(24,28,49,0.05)] dark:border-[#292E45] dark:bg-[#1D2238] dark:shadow-none md:w-[calc(50%-14px)] md:flex-none lg:w-auto lg:flex-1 sm:p-8 xl:p-10"
+              data-wow-duration="1s"
+              data-wow-offset="80"
+              data-wow-delay="0.2s"
+            >
+              <!-- Price -->
+              <h3 class="mb-8 text-[#181C31] dark:text-white">
+                <span class="text-[42px] font-bold leading-none"> $ 300 </span>
+                <span
+                  class="text-sm font-medium text-[#757693] dark:text-[#959CB1]"
+                >
+                  /month
+                </span>
+              </h3>
+
+              <!-- Pack name -->
+              <h4
+                class="mb-3 text-xl font-medium text-[#181C31] dark:text-white"
+              >
+                Large Pack
+              </h4>
+
+              <!-- Description -->
+              <p class="leading-relaxed text-[#757693] dark:text-[#959CB1]">
+                Lorem ipsum dolor sit amet,<br />
+                consec adipiscing elit.
+              </p>
+
+              <!-- Features -->
+              <div
+                class="mt-9 border-t border-[#E5E7EB] pb-4 pt-9 dark:border-[#292E45]"
+              >
+                <ul class="space-y-4">
+                  <li class="text-[#181C31] dark:text-[#959CB1]">
+                    300 GB Storage
+                  </li>
+
+                  <li class="text-[#181C31] dark:text-[#959CB1]">
+                    Unlimited Photos and Videos
+                  </li>
+
+                  <li class="text-[#181C31] dark:text-[#959CB1]">
+                    Exclusive Support
+                  </li>
+
+                  <li class="text-[#181C31] dark:text-[#959CB1]">
+                    Custom Branding Strategy
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Button -->
+              <button
+                type="button"
+                aria-label="Get Large Pack"
+                class="group/btn mt-auto inline-flex w-fit items-center gap-2.5 pt-10 font-medium text-[#006BFF] transition-colors duration-300 dark:text-white dark:hover:text-[#006BFF]"
+              >
+                <span>Get the Plan</span>
+
+                <svg
+                  class="transition-transform duration-300 group-hover/btn:translate-x-1.5"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5 12H19M19 12L13 6M19 12L13 18"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact / -->
+      <section
+        id="support"
+        class="bg-white px-4 py-12 dark:bg-[#181C31] md:px-8 md:py-14 lg:pt-16 lg:pb-0 2xl:px-0"
+      >
+        <div
+          class="relative mx-auto max-w-[1390px] px-5 pb-12 pt-10 md:px-8 lg:px-14 lg:pt-16 xl:px-20 xl:pb-20 xl:pt-20"
+        >
+          <!-- Gradient background -->
+          <div
+            class="pointer-events-none absolute inset-x-0 top-0 z-0 h-2/3 rounded-lg bg-gradient-to-t from-white to-[#DEE7F4] dark:from-transparent dark:to-[#24283E]"
+          ></div>
+
+          <!-- Dotted background -->
+          <div
+            class="pointer-events-none absolute inset-x-0 bottom-0 z-0 h-1/2 bg-[radial-gradient(circle,#CBD5E1_1px,transparent_1px)] bg-[length:18px_18px] opacity-50 dark:bg-[radial-gradient(circle,#3B425C_1px,transparent_1px)] dark:opacity-40"
+          ></div>
+
+          <!-- Contact content -->
+          <div
+            class="relative z-10 flex flex-col-reverse gap-10 md:flex-row md:items-start md:justify-between lg:gap-16"
+          >
+            <!-- Left: Contact form -->
+            <div
+              class="wow animate__fadeInDown w-full rounded-lg bg-white p-7 shadow-[0_8px_35px_rgba(24,28,49,0.06)] dark:border dark:border-[#292E45] dark:bg-[#181C31] dark:shadow-none sm:p-9 md:w-[60%] lg:w-[64%] lg:p-12 xl:p-[55px]"
+              data-wow-duration="1s"
+              data-wow-offset="80"
+            >
+              <h2
+                class="mb-10 text-3xl font-semibold text-[#181C31] dark:text-white lg:mb-14 lg:text-4xl"
+              >
+                Send a message
+              </h2>
+
+              <form id="contact-form">
+                <!-- Full name + Email -->
+                <div class="mb-8 flex flex-col gap-8 lg:flex-row lg:gap-12">
+                  <input
+                    type="text"
+                    name="fullName"
+                    placeholder="Full name"
+                    aria-label="Full name"
+                    autocomplete="name"
+                    required
+                    class="w-full min-w-0 border-0 border-b border-[#E5E7EB] bg-transparent pb-3 text-[#181C31] outline-none placeholder:text-[#959CB1] focus:border-[#006BFF] dark:border-[#292E45] dark:text-white dark:focus:border-[#006BFF] lg:w-1/2"
+                  />
+
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Email address"
+                    aria-label="Email address"
+                    autocomplete="email"
+                    required
+                    class="w-full min-w-0 border-0 border-b border-[#E5E7EB] bg-transparent pb-3 text-[#181C31] outline-none placeholder:text-[#959CB1] focus:border-[#006BFF] dark:border-[#292E45] dark:text-white dark:focus:border-[#006BFF] lg:w-1/2"
+                  />
+                </div>
+
+                <!-- Subject + Phone -->
+                <div class="mb-10 flex flex-col gap-8 lg:flex-row lg:gap-12">
+                  <input
+                    type="text"
+                    name="subject"
+                    placeholder="Subject"
+                    aria-label="Subject"
+                    required
+                    class="w-full min-w-0 border-0 border-b border-[#E5E7EB] bg-transparent pb-3 text-[#181C31] outline-none placeholder:text-[#959CB1] focus:border-[#006BFF] dark:border-[#292E45] dark:text-white dark:focus:border-[#006BFF] lg:w-1/2"
+                  />
+
+                  <input
+                    type="tel"
+                    name="phone"
+                    placeholder="Phone number"
+                    aria-label="Phone number"
+                    autocomplete="tel"
+                    class="w-full min-w-0 border-0 border-b border-[#E5E7EB] bg-transparent pb-3 text-[#181C31] outline-none placeholder:text-[#959CB1] focus:border-[#006BFF] dark:border-[#292E45] dark:text-white dark:focus:border-[#006BFF] lg:w-1/2"
+                  />
+                </div>
+
+                <!-- Resizable message -->
+                <div class="mb-10">
+                  <textarea
+                    name="message"
+                    rows="4"
+                    placeholder="Message"
+                    aria-label="Message"
+                    required
+                    class="min-h-[120px] w-full resize-y overflow-auto border-0 border-b border-[#E5E7EB] bg-transparent pb-3 text-[#181C31] outline-none placeholder:text-[#959CB1] focus:border-[#006BFF] dark:border-[#292E45] dark:text-white dark:focus:border-[#006BFF]"
+                  ></textarea>
+                </div>
+
+                <!-- Checkbox + Send Message -->
+                <div class="flex flex-wrap items-center justify-between gap-6">
+                  <!-- Checkbox -->
+                  <label
+                    class="flex max-w-[430px] cursor-pointer items-start gap-3"
+                  >
+                    <input
+                      type="checkbox"
+                      name="consent"
+                      required
+                      class="mt-1 h-5 w-5 shrink-0 cursor-pointer accent-[#006BFF]"
+                    />
+
+                    <span
+                      class="text-sm leading-relaxed text-[#757693] dark:text-[#959CB1]"
+                    >
+                      By clicking Checkbox, you agree to use our “Form” terms
+                      And consent cookie usage in browser.
+                    </span>
+                  </label>
+
+                  <!-- Submit button -->
+                  <button
+                    type="submit"
+                    class="group inline-flex shrink-0 items-center gap-2.5 rounded-full bg-[#181C31] px-6 py-3 font-medium text-white transition-colors duration-300 hover:bg-[#006BFF] dark:bg-[#292E45] dark:hover:bg-[#006BFF]"
+                  >
+                    <span>Send Message</span>
+
+                    <svg
+                      class="transition-transform duration-300 group-hover:translate-x-1.5"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M5 12H19M19 12L13 6M19 12L13 18"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            <!-- Right: Find us -->
+            <div
+              class="wow animate__fadeInDown w-full md:w-[35%] lg:w-[30%] lg:pt-12"
+              data-wow-duration="1s"
+              data-wow-offset="80"
+            >
+              <h3
+                class="mb-10 text-3xl font-semibold text-[#181C31] dark:text-white lg:mb-14 lg:text-4xl"
+              >
+                Find us
+              </h3>
+
+              <!-- Location -->
+              <div class="mb-8">
+                <h4
+                  class="mb-4 text-lg font-medium text-[#181C31] dark:text-white"
+                >
+                  Our Location
+                </h4>
+
+                <a
+                  href="https://www.google.com/maps/search/?api=1&amp;query=290%20Maryam%20Springs%20260%20Courbevoie%20Paris%20France"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-block leading-relaxed text-[#757693] transition-colors hover:text-[#006BFF] dark:text-[#959CB1] dark:hover:text-[#006BFF]"
+                >
+                  290 Maryam Springs 260,<br />
+                  Courbevoie, Paris, France
+                </a>
+              </div>
+
+              <!-- Email -->
+              <div class="mb-8">
+                <h4
+                  class="mb-4 text-lg font-medium text-[#181C31] dark:text-white"
+                >
+                  Email Address
+                </h4>
+
+                <a
+                  href="mailto:yourmail@domainname.com"
+                  class="break-all text-[#757693] transition-colors hover:text-[#006BFF] dark:text-[#959CB1] dark:hover:text-[#006BFF]"
+                >
+                  yourmail@domainname.com
+                </a>
+              </div>
+
+              <!-- Phone -->
+              <div>
+                <h4
+                  class="mb-4 text-lg font-medium text-[#181C31] dark:text-white"
+                >
+                  Phone Number
+                </h4>
+
+                <a
+                  href="tel:+009423346343843"
+                  class="text-[#757693] transition-colors hover:text-[#006BFF] dark:text-[#959CB1] dark:hover:text-[#006BFF]"
+                >
+                  +009 42334 6343 843
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- Blog -->
-      <section></section>
-      <!-- Back To Top button -->
-      <a></a>
+      <section
+        id="blog"
+        class="overflow-hidden bg-white py-12 dark:bg-[#181C31] lg:py-14 xl:py-16"
+      >
+        <div class="mx-auto max-w-[1315px] px-4 md:px-8 xl:px-0">
+          <!-- Section title -->
+          <div
+            class="wow animate__fadeInDown mx-auto text-center"
+            data-wow-duration="1s"
+            data-wow-offset="80"
+          >
+            <!-- Label -->
+            <span
+              class="mb-4 inline-block rounded-full bg-[#EDF5FF] px-[18px] py-3 text-sm font-medium text-[#181C31] dark:border dark:border-[#292E45] dark:bg-[#1C2136] dark:text-white"
+            >
+              NEWS & BLOGS
+            </span>
+
+            <!-- Title -->
+            <h2
+              class="mx-auto mb-5 text-3xl font-bold text-[#181C31] dark:text-white sm:text-4xl xl:text-[46px]"
+            >
+              Latest News & Blogs
+            </h2>
+
+            <!-- Description -->
+            <p
+              class="mx-auto max-w-[750px] text-base leading-relaxed text-[#757693] dark:text-[#959CB1]"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+              convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam
+              ante in maximus.
+            </p>
+          </div>
+
+          <!-- Blog cards -->
+          <div
+            class="mx-auto mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:mt-20 lg:grid-cols-3 xl:gap-10"
+          >
+            <!-- Blog 1 -->
+            <article
+              class="wow animate__fadeInDown"
+              data-wow-duration="1s"
+              data-wow-offset="80"
+            >
+              <a
+                href="#"
+                class="group block h-full rounded-lg bg-white p-4 pb-9 shadow-[0_8px_35px_rgba(24,28,49,0.05)] focus-visible:outline-2 focus-visible:outline-[#006BFF] dark:bg-[#1D2238] dark:shadow-none"
+              >
+                <!-- Image -->
+                <div
+                  class="relative aspect-[368/239] overflow-hidden rounded-lg"
+                >
+                  <img
+                    src="./img/blog1.webp"
+                    alt="Exploring MERN Stack"
+                    loading="lazy"
+                    class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
+                  />
+                </div>
+
+                <!-- Content -->
+                <div class="px-4">
+                  <h3
+                    class="mb-3 mt-7 line-clamp-2 text-xl font-medium leading-snug text-[#181C31] transition-colors duration-300 hover:text-[#006BFF] group-focus-visible:text-[#006BFF] dark:text-white dark:hover:text-[#006BFF]"
+                  >
+                    Exploring MERN Stack: Powering Modern Web Development
+                  </h3>
+
+                  <p
+                    class="line-clamp-3 leading-relaxed text-[#757693] dark:text-[#959CB1]"
+                  >
+                    In the world of web development, staying ahead of the curve
+                    is crucial. One technology stack that has gained immense
+                    popularity and is widely adopted by developers is the MERN
+                    stack. In this blog, we'll dive into the MERN stack,
+                    exploring its components and how it revolutionizes web
+                    development by leveraging the power of JavaScript and modern
+                    web technologies.
+                  </p>
+                </div>
+              </a>
+            </article>
+
+            <!-- Blog 2 -->
+            <article
+              class="wow animate__fadeInDown"
+              data-wow-duration="1s"
+              data-wow-offset="80"
+              data-wow-delay="0.1s"
+            >
+              <a
+                href="#"
+                class="group block h-full rounded-lg bg-white p-4 pb-9 shadow-[0_8px_35px_rgba(24,28,49,0.05)] focus-visible:outline-2 focus-visible:outline-[#006BFF] dark:bg-[#1D2238] dark:shadow-none"
+              >
+                <!-- Image -->
+                <div
+                  class="relative aspect-[368/239] overflow-hidden rounded-lg"
+                >
+                  <img
+                    src="./img/blog2.webp"
+                    alt="Best UI components for modern websites"
+                    loading="lazy"
+                    class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
+                  />
+                </div>
+
+                <!-- Content -->
+                <div class="px-4">
+                  <h3
+                    class="mb-3 mt-7 line-clamp-2 text-xl font-medium leading-snug text-[#181C31] transition-colors duration-300 hover:text-[#006BFF] group-focus-visible:text-[#006BFF] dark:text-white dark:hover:text-[#006BFF]"
+                  >
+                    Best UI components for modern website...
+                  </h3>
+
+                  <p
+                    class="line-clamp-3 leading-relaxed text-[#757693] dark:text-[#959CB1]"
+                  >
+                    Duis aute irure dolor in reprehenderit in voluptate velit
+                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat cupidatat. Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Quis enim lobortis scelerisque
+                    fermentum. Neque sodales ut etiam sit amet. Ligula
+                    ullamcorper malesuada proin libero nunc consequat interdum
+                    varius. Quam pellentesque nec nam aliquam sem et tortor
+                    consequat. Pellentesque adipiscing commodo elit at
+                    imperdiet. Semper auctor neque vitae tempus quam
+                    pellentesque nec. Amet dictum sit amet justo donec enim
+                    diam. Varius sit amet mattis vulputate enim nulla aliquet
+                    porttitor. Odio pellentesque diam volutpat commodo sed.
+                  </p>
+                </div>
+              </a>
+            </article>
+
+            <!-- Blog 3 -->
+            <article
+              class="wow animate__fadeInDown"
+              data-wow-duration="1s"
+              data-wow-offset="80"
+              data-wow-delay="0.2s"
+            >
+              <a
+                href="#"
+                class="group block h-full rounded-lg bg-white p-4 pb-9 shadow-[0_8px_35px_rgba(24,28,49,0.05)] focus-visible:outline-2 focus-visible:outline-[#006BFF] dark:bg-[#1D2238] dark:shadow-none"
+              >
+                <!-- Image -->
+                <div
+                  class="relative aspect-[368/239] overflow-hidden rounded-lg"
+                >
+                  <img
+                    src="./img/blog3.webp"
+                    alt="The Power of UI/UX"
+                    loading="lazy"
+                    class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
+                  />
+                </div>
+
+                <!-- Content -->
+                <div class="px-4">
+                  <h3
+                    class="mb-3 mt-7 line-clamp-2 text-xl font-medium leading-snug text-[#181C31] transition-colors duration-300 hover:text-[#006BFF] group-focus-visible:text-[#006BFF] dark:text-white dark:hover:text-[#006BFF]"
+                  >
+                    The Power of UI/UX: Elevating Digital Experiences
+                  </h3>
+
+                  <p
+                    class="line-clamp-3 leading-relaxed text-[#757693] dark:text-[#959CB1]"
+                  >
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Cras sit amet dictum neque, laoreet dolor.
+                  </p>
+                </div>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
     </main>
+
     <!-- Footer -->
-    <footer></footer>
+    <footer
+      class="border-t border-[#E5E7EB] bg-white dark:border-[#292E45] dark:bg-[#1D2238]"
+    >
+      <div class="mx-auto max-w-[1390px] px-4 md:px-8 2xl:px-0">
+        <!-- Footer main content -->
+        <div class="py-14 lg:py-20">
+          <div
+            class="flex flex-col gap-12 lg:flex-row lg:justify-between lg:gap-8"
+          >
+            <!-- Logo & Contact -->
+            <div
+              class="wow animate__fadeInDown w-full lg:w-1/4"
+              data-wow-duration="1s"
+              data-wow-offset="80"
+            >
+              <!-- Logo -->
+              <a href="#" class="inline-block">
+                <img
+                  src="./img/logo-light.svg"
+                  alt="Solid"
+                  class="h-auto w-[140px] dark:hidden"
+                />
+
+                <img
+                  src="./img/logo-dark.svg"
+                  alt="Solid"
+                  class="hidden h-auto w-[140px] dark:block"
+                />
+              </a>
+
+              <!-- Description -->
+              <p
+                class="mb-10 mt-5 max-w-[350px] leading-relaxed text-[#757693] dark:text-[#959CB1]"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
+
+              <!-- Contact -->
+              <p
+                class="mb-2 font-medium uppercase tracking-[5px] text-[#757693] dark:text-[#959CB1]"
+              >
+                CONTACT
+              </p>
+
+              <a
+                href="#"
+                class="inline-block text-2xl font-medium text-[#181C31] transition-colors duration-300 hover:text-[#006BFF] dark:text-white dark:hover:text-[#006BFF]"
+              >
+                hello@solid.com
+              </a>
+            </div>
+
+            <!-- Right columns -->
+            <div
+              class="flex w-full flex-col gap-10 sm:flex-row sm:flex-wrap sm:justify-between lg:w-2/3 lg:gap-6 xl:w-7/12"
+            >
+              <!-- Quick Links -->
+              <div
+                class="wow animate__fadeInDown"
+                data-wow-duration="1s"
+                data-wow-offset="80"
+              >
+                <h4
+                  class="mb-8 text-2xl font-medium text-[#181C31] dark:text-white"
+                >
+                  Quick Links
+                </h4>
+
+                <ul class="space-y-4 text-[#757693] dark:text-[#959CB1]">
+                  <li>
+                    <a
+                      href="#"
+                      class="transition-colors duration-300 hover:text-[#006BFF]"
+                    >
+                      Home
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="#features"
+                      class="transition-colors duration-300 hover:text-[#006BFF]"
+                    >
+                      Product
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="#"
+                      class="transition-colors duration-300 hover:text-[#006BFF]"
+                    >
+                      Careers
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="#pricing"
+                      class="transition-colors duration-300 hover:text-[#006BFF]"
+                    >
+                      Pricing
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Support -->
+              <div
+                class="wow animate__fadeInDown"
+                data-wow-duration="1s"
+                data-wow-offset="80"
+              >
+                <h4
+                  class="mb-8 text-2xl font-medium text-[#181C31] dark:text-white"
+                >
+                  Support
+                </h4>
+
+                <ul class="space-y-4 text-[#757693] dark:text-[#959CB1]">
+                  <li>
+                    <a
+                      href="#"
+                      class="transition-colors duration-300 hover:text-[#006BFF]"
+                    >
+                      Company
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="#blog"
+                      class="transition-colors duration-300 hover:text-[#006BFF]"
+                    >
+                      Press media
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="#blog"
+                      class="transition-colors duration-300 hover:text-[#006BFF]"
+                    >
+                      Our Blog
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="#support"
+                      class="transition-colors duration-300 hover:text-[#006BFF]"
+                    >
+                      Contact Us
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Newsletter -->
+              <div
+                class="wow animate__fadeInDown w-full sm:w-[280px] lg:w-[250px]"
+                data-wow-duration="1s"
+                data-wow-offset="80"
+              >
+                <h4
+                  class="mb-8 text-2xl font-medium text-[#181C31] dark:text-white"
+                >
+                  Newsletter
+                </h4>
+
+                <p
+                  class="mb-5 leading-relaxed text-[#757693] dark:text-[#959CB1]"
+                >
+                  Subscribe to receive future updates
+                </p>
+
+                <!-- Newsletter form -->
+                <form id="newsletter-form">
+                  <div class="relative">
+                    <input
+                      type="email"
+                      name="newsletterEmail"
+                      placeholder="Email address"
+                      aria-label="Email address"
+                      autocomplete="email"
+                      required
+                      class="w-full rounded-full border border-[#E5E7EB] bg-white px-6 py-4 pr-14 text-[#181C31] shadow-[0_5px_25px_rgba(24,28,49,0.04)] outline-none placeholder:text-[#959CB1] focus:border-[#006BFF] dark:border-[#292E45] dark:bg-[#181C31] dark:text-white dark:shadow-none dark:focus:border-[#006BFF]"
+                    />
+
+                    <!-- Submit button -->
+                    <button
+                      type="submit"
+                      aria-label="Subscribe to newsletter"
+                      class="absolute right-3 top-1/2 flex h-10 w-10 -translate-y-1/2 cursor-pointer items-center justify-center text-[#757693] transition-colors duration-300 hover:text-[#006BFF] dark:text-white dark:hover:text-[#006BFF]"
+                    >
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true"
+                      >
+                        <path
+                          d="M4 3L21 12L4 21L7 12L4 3Z"
+                          stroke="currentColor"
+                          stroke-width="1.8"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M7 12H21"
+                          stroke="currentColor"
+                          stroke-width="1.8"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer bottom -->
+        <div
+          class="flex flex-col items-center justify-between gap-6 border-t border-[#E5E7EB] py-7 text-[#757693] dark:border-[#292E45] dark:text-[#959CB1] lg:flex-row lg:gap-4"
+        >
+          <!-- Legal links -->
+          <div class="wow animate__fadeInDown" data-wow-duration="1s">
+            <ul
+              class="flex flex-wrap items-center justify-center gap-x-7 gap-y-3"
+            >
+              <li>
+                <a
+                  href="#"
+                  class="transition-colors duration-300 hover:text-[#006BFF]"
+                >
+                  English
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  class="transition-colors duration-300 hover:text-[#006BFF]"
+                >
+                  Privacy Policy
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#support"
+                  class="transition-colors duration-300 hover:text-[#006BFF]"
+                >
+                  Support
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Copyright -->
+          <div
+            class="wow animate__fadeInDown text-center"
+            data-wow-duration="1s"
+          >
+            <p>© 2026 Solid. All rights reserved</p>
+          </div>
+
+          <!-- Social icons -->
+          <div class="wow animate__fadeInDown" data-wow-duration="1s">
+            <ul class="flex items-center gap-6">
+              <!-- Facebook -->
+              <li>
+                <a
+                  href="#"
+                  aria-label="Facebook"
+                  class="text-[#CBD2DC] transition-colors duration-300 hover:text-[#006BFF] dark:hover:text-[#006BFF]"
+                >
+                  <i class="fa-brands fa-facebook-f text-xl"></i>
+                </a>
+              </li>
+
+              <!-- Twitter -->
+              <li>
+                <a
+                  href="#"
+                  aria-label="Twitter"
+                  class="text-[#CBD2DC] transition-colors duration-300 hover:text-[#006BFF] dark:hover:text-[#006BFF]"
+                >
+                  <i class="fa-brands fa-twitter text-xl"></i>
+                </a>
+              </li>
+
+              <!-- LinkedIn -->
+              <li>
+                <a
+                  href="#"
+                  aria-label="LinkedIn"
+                  class="text-[#CBD2DC] transition-colors duration-300 hover:text-[#006BFF] dark:hover:text-[#006BFF]"
+                >
+                  <i class="fa-brands fa-linkedin-in text-xl"></i>
+                </a>
+              </li>
+
+              <!-- Behance -->
+              <li>
+                <a
+                  href="#"
+                  aria-label="Behance"
+                  class="text-[#CBD2DC] transition-colors duration-300 hover:text-[#006BFF] dark:hover:text-[#006BFF]"
+                >
+                  <i class="fa-brands fa-behance text-xl"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- back to top btn -->
+    <button
+      id="back-to-top"
+      type="button"
+      aria-label="Scroll to top"
+      class="pointer-events-none fixed bottom-6 right-6 z-[99] flex h-10 w-10 translate-y-3 items-center justify-center rounded-md bg-[#006BFF] text-white opacity-0 shadow-md transition-all duration-300 hover:bg-[#0055D4] sm:bottom-8 sm:right-8"
+    >
+      <span
+        class="mt-[6px] h-3 w-3 rotate-45 border-r-0 border-b-0 border-l border-t border-white"
+      ></span>
+    </button>
+
     <!-- ======SCRIPT====== -->
     <!-- Flowbite -->
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
@@ -1220,6 +2888,142 @@
     <script src="./libs/wow/wow.min.js"></script>
     <script>
       new WOW().init();
+    </script>
+
+    <!-- accordion -->
+    <script>
+      const faqButtons = document.querySelectorAll(
+        "#faq-accordion .faq-toggle",
+      );
+
+      faqButtons.forEach(function (button) {
+        button.addEventListener("click", function () {
+          const isOpen = button.getAttribute("aria-expanded") === "true";
+
+          // close
+          faqButtons.forEach(function (item) {
+            item.setAttribute("aria-expanded", "false");
+
+            item.querySelector(".faq-icon").textContent = "+";
+
+            const answerId = item.getAttribute("aria-controls");
+            document.getElementById(answerId).classList.add("hidden");
+          });
+
+          // open
+          if (!isOpen) {
+            button.setAttribute("aria-expanded", "true");
+
+            button.querySelector(".faq-icon").textContent = "−";
+
+            const answerId = button.getAttribute("aria-controls");
+            document.getElementById(answerId).classList.remove("hidden");
+          }
+        });
+      });
+    </script>
+
+    <!-- Swiper  -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+    <script>
+      window.addEventListener("load", function () {
+        const testimonialSwiper = new Swiper(".testimonial-swiper", {
+          slidesPerView: 1,
+          spaceBetween: 20,
+          loop: true,
+          speed: 1000,
+          grabCursor: true,
+
+          autoplay: {
+            delay: 3500,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          },
+
+          pagination: {
+            el: ".testimonial-pagination",
+            clickable: true,
+          },
+
+          breakpoints: {
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 24,
+            },
+
+            1280: {
+              slidesPerView: 2,
+              spaceBetween: 48,
+            },
+          },
+        });
+      });
+    </script>
+
+    <!-- js contact  -->
+    <script>
+      const contactForm = document.getElementById("contact-form");
+
+      contactForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        alert(
+          "Đây là form demo. Chức năng gửi tin nhắn cần được kết nối với backend hoặc dịch vụ xử lý form.",
+        );
+      });
+    </script>
+
+    <!-- js back to top btn  -->
+
+    <script>
+      const backToTopButton = document.getElementById("back-to-top");
+      const featuresSection = document.getElementById("features");
+
+      function updateBackToTop() {
+        const shouldShow = featuresSection
+          ? featuresSection.getBoundingClientRect().top <= window.innerHeight
+          : window.scrollY > 400;
+
+        if (shouldShow) {
+          backToTopButton.classList.remove(
+            "opacity-0",
+            "pointer-events-none",
+            "translate-y-3",
+          );
+          backToTopButton.tabIndex = 0;
+        } else {
+          backToTopButton.classList.add(
+            "opacity-0",
+            "pointer-events-none",
+            "translate-y-3",
+          );
+          backToTopButton.tabIndex = -1;
+        }
+      }
+
+      backToTopButton.addEventListener("click", function () {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+
+      window.addEventListener("scroll", updateBackToTop);
+      window.addEventListener("resize", updateBackToTop);
+
+      updateBackToTop();
+    </script>
+
+    <!-- JS footer: newsletter -->
+    <script>
+      const newsletterForm = document.getElementById("newsletter-form");
+
+      newsletterForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        alert("Newsletter đang ở chế độ demo, chưa kết nối dịch vụ đăng ký.");
+      });
     </script>
   </body>
 </html>

@@ -112,6 +112,26 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
     />
+
+    <!-- footer logo -->
+    <style>
+      #footer-logo-light {
+        display: block;
+      }
+
+      #footer-logo-dark {
+        display: none;
+      }
+
+      html.dark #footer-logo-light {
+        display: none;
+      }
+
+      html.dark #footer-logo-dark {
+        display: block;
+      }
+    </style>
+
     <style>
       #testimonials .swiper-pagination-bullet {
         width: 10px;
@@ -1396,15 +1416,17 @@
                 />
 
                 <!-- Sign up button -->
+
                 <a
                   href="https://youtu.be/dQw4w9WgXcQ?si=R60Hp9Nd_NecrD1D"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="inline-flex shrink-0 items-center gap-2.5 rounded-full bg-[#181C31] px-6 py-3 font-medium text-white transition-opacity hover:opacity-90 dark:bg-white dark:text-[#181C31]"
+                  class="group inline-flex shrink-0 items-center gap-2.5 rounded-full bg-[#181C31] px-6 py-3 font-medium text-white transition-colors duration-300 hover:bg-[#006BFF] dark:bg-white dark:text-[#181C31] dark:hover:bg-[#006BFF] dark:hover:text-white"
                 >
                   Sign up free
 
                   <svg
+                    class="transition-transform duration-300 group-hover:translate-x-1"
                     width="18"
                     height="18"
                     viewBox="0 0 24 24"
@@ -1509,7 +1531,7 @@
                   <button
                     type="button"
                     class="faq-toggle flex w-full items-center justify-between gap-5 px-6 py-5 text-left font-medium text-[#181C31] dark:text-white lg:px-9 lg:py-7"
-                    aria-expanded="false"
+                    aria-expanded="true"
                     aria-controls="faq-answer-1"
                   >
                     <span> Lorem ipsum dolor sit amet, consectetur </span>
@@ -1517,13 +1539,13 @@
                     <span
                       class="faq-icon shrink-0 text-3xl font-normal leading-none"
                     >
-                      +
+                      -
                     </span>
                   </button>
 
                   <div
                     id="faq-answer-1"
-                    class="hidden border-t border-[#E5E7EB] px-6 py-5 dark:border-[#292E45] lg:px-9 lg:py-7"
+                    class="border-t border-[#E5E7EB] px-6 py-5 dark:border-[#292E45] lg:px-9 lg:py-7"
                   >
                     <p
                       class="leading-relaxed text-[#757693] dark:text-[#959CB1]"
@@ -2515,15 +2537,17 @@
               <!-- Logo -->
               <a href="#" class="inline-block">
                 <img
+                  id="footer-logo-light"
                   src="./img/logo-light.svg"
                   alt="Solid"
-                  class="h-auto w-[140px] dark:hidden"
+                  class="h-auto w-[140px]"
                 />
 
                 <img
+                  id="footer-logo-dark"
                   src="./img/logo-dark.svg"
                   alt="Solid"
-                  class="hidden h-auto w-[140px] dark:block"
+                  class="h-auto w-[140px]"
                 />
               </a>
 
@@ -2551,7 +2575,7 @@
 
             <!-- Right columns -->
             <div
-              class="flex w-full flex-col gap-10 sm:flex-row sm:flex-wrap sm:justify-between lg:w-2/3 lg:gap-6 xl:w-7/12"
+              class="flex w-full flex-col gap-10 md:flex-row md:flex-wrap md:justify-between lg:w-2/3 lg:gap-6 xl:w-7/12"
             >
               <!-- Quick Links -->
               <div
@@ -2657,7 +2681,7 @@
 
               <!-- Newsletter -->
               <div
-                class="wow animate__fadeInDown w-full sm:w-[280px] lg:w-[250px]"
+                class="wow animate__fadeInDown w-full md:w-[280px] lg:w-[250px]"
                 data-wow-duration="1s"
                 data-wow-offset="80"
               >
@@ -2982,7 +3006,8 @@
 
       function updateBackToTop() {
         const shouldShow = featuresSection
-          ? featuresSection.getBoundingClientRect().top <= window.innerHeight
+          ? featuresSection.getBoundingClientRect().top <=
+            window.innerHeight * 0.5
           : window.scrollY > 400;
 
         if (shouldShow) {

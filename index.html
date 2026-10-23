@@ -30,6 +30,9 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+    <!-- List Js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"></script>
+
     <!-- Tailwind  -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style type="text/tailwindcss">
@@ -303,6 +306,8 @@
           <div class="mt-7 flex items-center gap-6 xl:mt-0">
             <button
               type="button"
+              data-modal-target="search-modal"
+              data-modal-toggle="search-modal"
               class="text-waterloo hidden sm:flex h-[38px] w-[38px] items-center justify-center rounded-full text-waterloo cursor-pointer"
             >
               <svg
@@ -2832,6 +2837,267 @@
       ></span>
     </button>
 
+    <!-- Search Popup -->
+    <div
+      id="search-modal"
+      tabindex="-1"
+      aria-hidden="true"
+      class="hidden fixed inset-0 z-[99999] items-start justify-center bg-black/60 px-4 pt-[12vh]"
+    >
+      <div
+        class="w-full max-w-[600px] overflow-hidden rounded-lg bg-white shadow-xl dark:bg-[#1C2136]"
+      >
+        <div
+          class="flex items-center gap-3 border-b border-[#E8EAF2] px-4 dark:border-[#2D334D]"
+        >
+          <svg
+            class="h-5 w-5 shrink-0 text-[#757693]"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="1.5"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"
+            />
+          </svg>
+          <input
+            type="search"
+            autocomplete="off"
+            placeholder="Search Entire Site | Products, Docs, Pages ..."
+            class="search h-14 w-full border-0 bg-transparent p-0 text-[15px] text-[#181C31] placeholder:text-[#757693] focus:outline-none focus:ring-0 dark:text-white"
+          />
+          <button
+            type="button"
+            data-modal-hide="search-modal"
+            aria-label="Đóng tìm kiếm"
+            class="shrink-0 rounded border border-[#E8EAF2] px-1.5 py-0.5 text-xs text-[#757693] hover:text-[#006BFF] dark:border-[#2D334D]"
+          >
+            Esc
+          </button>
+        </div>
+
+        <ul class="list max-h-[60vh] overflow-y-auto py-2">
+          <!-- Docs -->
+          <li>
+            <button
+              type="button"
+              data-modal-hide="search-modal"
+              class="block w-full px-4 py-3 text-left hover:bg-[#F4F6FB] dark:hover:bg-[#252B45]"
+            >
+              <span
+                class="title block text-sm font-medium text-[#181C31] dark:text-white"
+                >Using Tailwind Templates</span
+              >
+              <span class="block text-xs text-[#757693]"
+                >docs : /docs/tailwind-template</span
+              >
+            </button>
+          </li>
+          <li>
+            <button
+              type="button"
+              data-modal-hide="search-modal"
+              class="block w-full px-4 py-3 text-left hover:bg-[#F4F6FB] dark:hover:bg-[#252B45]"
+            >
+              <span
+                class="title block text-sm font-medium text-[#181C31] dark:text-white"
+                >Using Tailwind Components</span
+              >
+              <span class="block text-xs text-[#757693]"
+                >docs : /docs/tailwind-component</span
+              >
+            </button>
+          </li>
+          <li>
+            <button
+              type="button"
+              data-modal-hide="search-modal"
+              class="block w-full px-4 py-3 text-left hover:bg-[#F4F6FB] dark:hover:bg-[#252B45]"
+            >
+              <span
+                class="title block text-sm font-medium text-[#181C31] dark:text-white"
+                >Style Guide</span
+              >
+              <span class="block text-xs text-[#757693]"
+                >docs : /docs/style-guide</span
+              >
+            </button>
+          </li>
+          <li>
+            <button
+              type="button"
+              data-modal-hide="search-modal"
+              class="block w-full px-4 py-3 text-left hover:bg-[#F4F6FB] dark:hover:bg-[#252B45]"
+            >
+              <span
+                class="title block text-sm font-medium text-[#181C31] dark:text-white"
+                >Configuring Contact Form</span
+              >
+              <span class="block text-xs text-[#757693]"
+                >docs : /docs/contact-form</span
+              >
+            </button>
+          </li>
+          <li>
+            <button
+              type="button"
+              data-modal-hide="search-modal"
+              class="block w-full px-4 py-3 text-left hover:bg-[#F4F6FB] dark:hover:bg-[#252B45]"
+            >
+              <span
+                class="title block text-sm font-medium text-[#181C31] dark:text-white"
+                >Bootstrap Template Guide</span
+              >
+              <span class="block text-xs text-[#757693]"
+                >docs : /docs/bootstrap-template</span
+              >
+            </button>
+          </li>
+
+          <li>
+            <button
+              type="button"
+              data-modal-hide="search-modal"
+              class="flex w-full items-center gap-3 px-4 py-3 text-left hover:bg-[#F4F6FB] dark:hover:bg-[#252B45]"
+            >
+              <img
+                src="./img/blog2.webp"
+                alt=""
+                class="h-12 w-20 shrink-0 rounded object-cover"
+              />
+              <span
+                ><span
+                  class="title block text-sm font-medium text-[#181C31] dark:text-white"
+                  >UI/UX design allows companies to establish a unique and
+                  recognizable brand identity.</span
+                >
+                <span class="block text-xs text-[#757693]"
+                  >blog : /blog/uiux-design-allows-companies</span
+                ></span
+              >
+            </button>
+          </li>
+          <li>
+            <button
+              type="button"
+              data-modal-hide="search-modal"
+              class="flex w-full items-center gap-3 px-4 py-3 text-left hover:bg-[#F4F6FB] dark:hover:bg-[#252B45]"
+            >
+              <img
+                src="./img/blog3.webp"
+                alt=""
+                class="h-12 w-20 shrink-0 rounded object-cover"
+              />
+              <span
+                ><span
+                  class="title block text-sm font-medium text-[#181C31] dark:text-white"
+                  >Tips to quickly improve your coding speed in 2025 by Traversy
+                  media</span
+                >
+                <span class="block text-xs text-[#757693]"
+                  >blog : /blog/tips-to-quickly-improve-your-coding-speed</span
+                ></span
+              >
+            </button>
+          </li>
+          <li>
+            <button
+              type="button"
+              data-modal-hide="search-modal"
+              class="flex w-full items-center gap-3 px-4 py-3 text-left hover:bg-[#F4F6FB] dark:hover:bg-[#252B45]"
+            >
+              <img
+                src="./img/blog1.webp"
+                alt=""
+                class="h-12 w-20 shrink-0 rounded object-cover"
+              />
+              <span
+                ><span
+                  class="title block text-sm font-medium text-[#181C31] dark:text-white"
+                  >The Rise of SaaS Startups: Revolutionizing Business
+                  Solutions</span
+                >
+                <span class="block text-xs text-[#757693]"
+                  >blog : /blog/the-rise-of-saas-startups</span
+                ></span
+              >
+            </button>
+          </li>
+          <li>
+            <button
+              type="button"
+              data-modal-hide="search-modal"
+              class="flex w-full items-center gap-3 px-4 py-3 text-left hover:bg-[#F4F6FB] dark:hover:bg-[#252B45]"
+            >
+              <img
+                src="./img/blog3.webp"
+                alt=""
+                class="h-12 w-20 shrink-0 rounded object-cover"
+              />
+              <span
+                ><span
+                  class="title block text-sm font-medium text-[#181C31] dark:text-white"
+                  >The Power of UI/UX: Elevating Digital Experiences</span
+                >
+                <span class="block text-xs text-[#757693]"
+                  >blog :
+                  /blog/the-power-of-uiux-elevating-digital-experiences</span
+                ></span
+              >
+            </button>
+          </li>
+          <li>
+            <button
+              type="button"
+              data-modal-hide="search-modal"
+              class="flex w-full items-center gap-3 px-4 py-3 text-left hover:bg-[#F4F6FB] dark:hover:bg-[#252B45]"
+            >
+              <img
+                src="./img/blog1.webp"
+                alt=""
+                class="h-12 w-20 shrink-0 rounded object-cover"
+              />
+              <span
+                ><span
+                  class="title block text-sm font-medium text-[#181C31] dark:text-white"
+                  >The MERN stack has become a go-to choice for modern web
+                  development projects</span
+                >
+                <span class="block text-xs text-[#757693]"
+                  >blog : /blog/the-mern-stack-has-become-a-go-to-choice</span
+                ></span
+              >
+            </button>
+          </li>
+          <li>
+            <button
+              type="button"
+              data-modal-hide="search-modal"
+              class="flex w-full items-center gap-3 px-4 py-3 text-left hover:bg-[#F4F6FB] dark:hover:bg-[#252B45]"
+            >
+              <img
+                src="./img/blog1.webp"
+                alt=""
+                class="h-12 w-20 shrink-0 rounded object-cover"
+              />
+              <span
+                ><span
+                  class="title block text-sm font-medium text-[#181C31] dark:text-white"
+                  >Exploring MERN Stack: Powering Modern Web Development</span
+                >
+                <span class="block text-xs text-[#757693]"
+                  >blog :
+                  /blog/exploring-the-mern-stack-powering-modern-web-development</span
+                ></span
+              >
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
     <!-- ======SCRIPT====== -->
     <!-- Flowbite -->
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
@@ -3024,6 +3290,10 @@
 
         alert("Newsletter đang ở chế độ demo, chưa kết nối dịch vụ đăng ký.");
       });
+    </script>
+    <!-- List Js -->
+    <script>
+      new List("search-modal", { valueNames: ["title"] });
     </script>
   </body>
 </html>

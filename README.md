@@ -9,7 +9,8 @@ Dựng lại trang Home của template [Solid](https://solid.nextjstemplates.com
 | Trần Gia Bảo Ngọc | Header, Hero, Brands, Features, About, Features Tab, Fun Fact      |
 | Nguyễn Khánh Linh | Integration, CTA, FAQ, Testimonial, Pricing, Contact, Blog, Footer |
 
-📋 Chi tiết phân công, tiến độ và test chéo: [Phan_cong_Capstone_Nhom_2.xlsx](https://docs.google.com/spreadsheets/d/16TW9CMmdGmDMCu_v9zFSX2_NkD-GZrui/edit?usp=sharing&ouid=104549987735682654794&rtpof=true&sd=true)
+📋 Chi tiết phân công, tiến độ và test chéo:
+https://docs.google.com/spreadsheets/d/16TW9CMmdGmDMCu_v9zFSX2_NkD-GZrui/edit?usp=sharing&ouid=104549987735682654794&rtpof=true&sd=true
 
 ## Công nghệ
 
@@ -21,4 +22,5 @@ Dựng lại trang Home của template [Solid](https://solid.nextjstemplates.com
 
 ## Cách chạy
 
-Truy cập link: [ĐIỀN LINK VERCEL](ĐIỀN_LINK_VERCEL)
+Truy cập link:
+https://solid-website-eta.vercel.app/
